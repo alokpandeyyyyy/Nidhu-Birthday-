@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Wish 2</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+body {margin:0;height:100vh;display:flex;justify-content:center;align-items:center;flex-direction:column;background:linear-gradient(135deg,#ffb6c1,#ff69b4);font-family:"Poppins",sans-serif;color:#fff;text-align:center;overflow:hidden;padding:20px;}
+h2 {font-size:2.4rem;font-family:"Dancing Script",cursive;animation:fadeIn 3s ease-in forwards;opacity:0;line-height:1.8;text-shadow:2px 2px 10px rgba(0,0,0,0.3);max-width:900px;}
+@keyframes fadeIn {from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+a {position:absolute;bottom:30px;background:white;color:#ff1493;text-decoration:none;padding:12px 24px;border-radius:30px;font-weight:bold;transition:0.3s;}
+a:hover {background:#ff1493;color:white;}
+.fall {position:absolute;top:-50px;font-size:26px;animation:fall 10s linear infinite;opacity:0.9;}
+@keyframes fall {0%{transform:translateY(-50px) rotate(0deg);}100%{transform:translateY(110vh) rotate(360deg);}}
+.corner {position:absolute;font-size:36px;opacity:0.8;}
+.corner1{top:10px;left:10px;} .corner2{top:10px;right:10px;} .corner3{bottom:10px;left:10px;} .corner4{bottom:10px;right:10px;}
+</style>
+</head>
+<body>
+<div class="corner corner1">🎈</div>
+<div class="corner corner2">🧁</div>
+<div class="corner corner3">✨</div>
+<div class="corner corner4">🎁</div>
+
+<h2>🌸 Wishing you endless joy and laughter today! May your heart overflow with happiness and love. 🌸</h2>
+
+<a href="page3.html">Next ➡</a>
+
+<audio autoplay loop hidden>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function createFalling(symbol){const elem=document.createElement("div");elem.classList.add("fall");elem.innerText=symbol;elem.style.left=Math.random()*100+"vw";elem.style.animationDuration=(5+Math.random()*5)+"s";document.body.appendChild(elem);setTimeout(()=>{elem.remove();},10000);}
+setInterval(()=>createFalling("🌹"),500);
+setInterval(()=>createFalling("💖"),800);
+</script>
+</body>
+</html>
